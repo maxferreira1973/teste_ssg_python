@@ -1,0 +1,201 @@
+﻿############################################# TESTE PARA ESPECIALISTA DE DADOS #############################################
+
+
+
+
+#%%
+# ANTES DE TUDO, IMPORTE AS BIBLIOTECAS ABAIXO:
+
+
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+# Para evitar que o matplotlib tente exibir as janelas em um ambiente sem tela
+# Remova ou comente esta linha se for rodar em um ambiente com interface gráfica
+plt.switch_backend('Agg')
+
+
+
+
+#%%
+# Bem-vindo(a) ao teste para a vaga de Especialista de Dados!
+# Por favor, preencha as seções indicadas com o seu código e suas explicações.
+
+
+
+
+##### Exercício 1: Manipulação de Dados com Pandas #####
+
+
+# Faça o upload do arquivo 'vendas.csv' e chame de df_vendas
+
+
+df_vendas = pd.read_csv('vendas.csv')
+
+
+# PERGUNTAS
+
+
+    # 1. Crie uma nova coluna 'Valor_Total' que seja 'Quantidade' * 'Preco_Unitario'.
+    # 2. Qual o valor total de vendas por 'Produto'?
+    # 3. Qual o produto mais vendido (em quantidade total)?
+    # 4. Encontre as vendas que ocorreram na 'Regiao' 'Norte' e cujo 'Valor_Total' foi superior a R$ 30.
+    # 5. Crie uma nova coluna 'Mes_Venda' extraindo o mês da coluna 'Data_Venda'.
+
+
+
+
+# Sua Resolução para o Exercício 1:
+    
+# --- ESPAÇO PARA VOCÊ ESCREVER O CÓDIGO DO EXERCÍCIO 1 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# --- FIM DA SEÇÃO PARA VOCÊ ESCREVER O CÓDIGO DO EXERCÍCIO 1 ---
+
+
+# df_resultante deve ser o DataFrame após as modificações do Exercício 1
+# Por favor, certifique-se de que a última linha do seu código do Exercício 1
+# onde você define o df_vendas, seja atribuída à variável df_resultante se for criar uma nova.
+# Caso contrário, o df_vendas original modificado será usado.
+df_resultante = df_vendas.copy() # Garante que as modificações são refletidas aqui.
+
+
+
+
+#%%
+##### Exercício 2: Análise Descritiva e Visualização #####
+# Usaremos o DataFrame de vendas gerado no Exercício 1.
+print("DataFrame para Análise (primeiras 5 linhas):")
+print(df_resultante.head())
+print("\n")
+
+
+# PERGUNTAS
+
+
+    # 1. Calcule as estatísticas descritivas básicas para a coluna 'Valor_Total' (média, mediana, desvio padrão, mínimo, máximo, etc.).
+    # 2. Qual a distribuição de 'Valor_Total' por 'Regiao'? Apresente a média e o desvio padrão para cada região.
+    # 3. Crie um gráfico de barras mostrando o 'Valor_Total' de vendas por 'Produto'. Salve o gráfico como 'valor_total_por_produto.png'.
+    # 4. Crie um boxplot para visualizar a distribuição do 'Valor_Total' por 'Regiao'. Salve o boxplot como 'boxplot_valor_total_por_regiao.png'.
+    # 5. Encontre os valores da coluna 'Valor_Total' que estão acima do percentil 75.
+
+
+# Sua Resolução para o Exercício 2:
+    
+# --- ESPAÇO PARA VOCÊ ESCREVER O CÓDIGO DO EXERCÍCIO 2 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# --- FIM DA SEÇÃO PARA VOCÊ ESCREVER O CÓDIGO DO EXERCÍCIO 2 ---
+
+
+
+
+#%%
+##### Exercício 3: Modelo Preditivo Básico ---
+# Cenário: Queremos construir um modelo simples para prever o 'Valor_Total' de uma venda com base na 'Quantidade' e no 'Preco_Unitario'.
+# Usaremos o DataFrame de vendas gerado no Exercício 1.
+
+
+# Pré-processamento: Garantir que as colunas numéricas estejam corretas
+df_modelo = df_resultante[['Quantidade', 'Preco_Unitario', 'Valor_Total']].copy()
+
+
+# Definir features (X) e target (y)
+X = df_modelo[['Quantidade', 'Preco_Unitario']]
+y = df_modelo['Valor_Total']
+
+
+# PERGUNTAS
+
+
+    # 1. Divida os dados em conjuntos de treino (80%) e teste (20%) usando `random_state=42`.
+    # 2. Treine um modelo de Regressão Linear Simples da biblioteca `sklearn.linear_model` para prever 'Valor_Total' usando 'Quantidade' e 'Preco_Unitario'.
+    # 3. Faça previsões no conjunto de teste.
+    # 4. Calcule o Erro Quadrático Médio (MSE) e o R² do modelo usando `sklearn.metrics`.
+    # 5. Explique brevemente (em texto) o que esses dois valores (MSE e R²) significam para a performance do modelo, e avalie o resultado do seu modelo.
+
+
+
+
+# Sua Resolução para o Exercício 2:
+    
+# --- ESPAÇO PARA VOCÊ ESCREVER O CÓDIGO DO EXERCÍCIO 3 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# --- FIM DA SEÇÃO PARA VOCÊ ESCREVER O CÓDIGO DO EXERCÍCIO 3 ---
