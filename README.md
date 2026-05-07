@@ -56,4 +56,4 @@ Este repositório contém a solução detalhada para o desafio técnico de Espec
 * `README.md`: Documentação do projeto.
 
 ---
-**Desenvolvido por [Seu Nome]**
+**Desenvolvido por Max Ferreira**
