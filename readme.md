@@ -45,4 +45,4 @@ O projeto foi estruturado para responder aos cinco pontos principais do enunciad
 5. Execute o script: `python3 solucao.py`.
 
 ---
-Desenvolvido por **[Seu Nome]** para o processo seletivo de Especialista de Dados.
+Desenvolvido por **Maximiliano de Jesus Ferreira** para o processo seletivo de Especialista de Dados.
